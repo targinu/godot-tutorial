@@ -10,6 +10,3 @@ func _ready():
 func _process(delta) -> void:
 	pass
 
-
-func _teste():
-	pass
