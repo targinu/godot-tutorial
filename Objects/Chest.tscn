@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bksosklxtjtg6"]
+
+[ext_resource type="PackedScene" uid="uid://c6q6ldbaoj4tf" path="res://Models/chest.glb" id="1_xcv1o"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_odfju"]
+points = PackedVector3Array(-0.25, 0, -0.25, -0.25, 0, 0.25, -0.25, 0.25, -0.25, 0.25, 0, -0.25, -0.25, 0.25, 0.25, 0.25, 0, 0.25, 0.25, 0.25, -0.25, 0.25, 0.25, 0.25)
+
+[node name="chest" instance=ExtResource("1_xcv1o")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_odfju")

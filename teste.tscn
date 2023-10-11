@@ -1,0 +1,130 @@
+[gd_scene load_steps=18 format=3 uid="uid://cqmucc6dodpr1"]
+
+[ext_resource type="Script" path="res://Scripts/teste.gd" id="1_lt8vi"]
+[ext_resource type="PackedScene" uid="uid://dergayfd88ulf" path="res://Objects/Bridge.tscn" id="2_bau3e"]
+[ext_resource type="PackedScene" uid="uid://bvs054lf5d2ug" path="res://Objects/BlockLarge.tscn" id="2_liwdg"]
+[ext_resource type="PackedScene" uid="uid://c0h3mdrxs6qsk" path="res://Objects/BlockRounded.tscn" id="3_bv2hi"]
+[ext_resource type="PackedScene" uid="uid://csxo57hwihfm1" path="res://Objects/BlockQuarter.tscn" id="4_cd8ro"]
+[ext_resource type="PackedScene" uid="uid://bksosklxtjtg6" path="res://Objects/Chest.tscn" id="5_7umyb"]
+[ext_resource type="PackedScene" uid="uid://cwdeagbf5txcy" path="res://Objects/BlockSlope.tscn" id="6_p05ah"]
+[ext_resource type="PackedScene" uid="uid://cop8kcpg8xfnk" path="res://Objects/BlockSlopeHalf.tscn" id="7_fe2db"]
+[ext_resource type="PackedScene" uid="uid://droiornj50gc5" path="res://Actors/character_skeleton.tscn" id="10_hcmec"]
+[ext_resource type="Script" path="res://Scripts/character.gd" id="11_a35sn"]
+[ext_resource type="PackedScene" uid="uid://15yrnycluamy" path="res://Objects/coin_gold.tscn" id="12_bfbmy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8jby5"]
+
+[sub_resource type="Sky" id="Sky_02el3"]
+sky_material = SubResource("ProceduralSkyMaterial_8jby5")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_0n8me"]
+background_mode = 2
+sky = SubResource("Sky_02el3")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ln4n5"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ocwk0"]
+size = Vector2(10, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g3fw5"]
+data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_lt8vi")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0n8me")
+
+[node name="CameraHub" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraHub"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 7)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.39057, 0.920573, 0, -0.920573, 0.39057, 0, 9, 5)
+shadow_enabled = true
+
+[node name="ground" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_ln4n5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
+transform = Transform3D(0.999965, 0, 0.00839494, 0, 1, 0, -0.00839494, 0, 0.999965, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ocwk0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+shape = SubResource("ConcavePolygonShape3D_g3fw5")
+
+[node name="lvl01" type="Node3D" parent="."]
+
+[node name="blockLarge2" parent="lvl01" instance=ExtResource("2_liwdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="blockLarge3" parent="lvl01" instance=ExtResource("2_liwdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="bridge" parent="lvl01" instance=ExtResource("2_bau3e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.543953, 0.5, 1)
+
+[node name="bridge2" parent="lvl01" instance=ExtResource("2_bau3e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.46706, 0.5, 1)
+
+[node name="blockRounded" parent="lvl01" instance=ExtResource("3_bv2hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -0.2)
+
+[node name="blockRounded2" parent="lvl01" instance=ExtResource("3_bv2hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="blockQuarter2" parent="lvl01" instance=ExtResource("4_cd8ro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+
+[node name="blockQuarter3" parent="lvl01" instance=ExtResource("4_cd8ro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.2, -2)
+
+[node name="blockQuarter4" parent="lvl01" instance=ExtResource("4_cd8ro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, -2)
+
+[node name="blockLarge" parent="lvl01" instance=ExtResource("2_liwdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.6, -2.2)
+
+[node name="chest" parent="lvl01" instance=ExtResource("5_7umyb")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 1.6, -2.2)
+
+[node name="blockSlope" parent="lvl01" instance=ExtResource("6_p05ah")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.874, 0, -0.5)
+
+[node name="blockSlopeHalf" parent="lvl01" instance=ExtResource("7_fe2db")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, 1)
+
+[node name="blockLarge4" parent="lvl01" instance=ExtResource("2_liwdg")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0, 2.5)
+
+[node name="blockSlopeHalf2" parent="lvl01" instance=ExtResource("7_fe2db")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1, 0, 3.2)
+
+[node name="blockSlopeHalf3" parent="lvl01" instance=ExtResource("7_fe2db")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1, 0.5, 2.2)
+
+[node name="character-skeleton" parent="." instance=ExtResource("10_hcmec")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+script = ExtResource("11_a35sn")
+
+[node name="coins" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="coinGold" parent="coins" instance=ExtResource("12_bfbmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.152, 1)
+
+[node name="coinGold2" parent="coins" instance=ExtResource("12_bfbmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.152, 1)
+
+[node name="coinGold3" parent="coins" instance=ExtResource("12_bfbmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97386, 1.15236, -1.95672)
+
+[node name="coinGold5" parent="coins" instance=ExtResource("12_bfbmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.313, -1.97)
+
+[node name="coinGold6" parent="coins" instance=ExtResource("12_bfbmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0182444, 1.46887, -1.96972)
