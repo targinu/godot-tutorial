@@ -1,5 +1,5 @@
-Timer
 CollisionShape3D
+Timer
 CharacterBody3D
 MeshInstance3D
 WorldEnvironment

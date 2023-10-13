@@ -27,6 +27,16 @@ func _physics_process(delta):
 	if player and player.get_global_transform().origin.distance_to(global_transform.origin) < 5.0:
 		var player_direction = (player.global_transform.origin - global_transform.origin).normalized()
 		velocity += player_direction * enemySpeed
+		
+		# Use look_at() para ajustar a rotação do "enemy" na direção do jogador
+		look_at(player.global_transform.origin, Vector3(0, 1, 0))
+		
+		# Ajusta a rotação do "enemy" para evitar andar de costas
+		adjust_rotation()
+		
+		$anim.play("walk")  #reproduz a animação de caminhar quando estiver andando
+	else:
+		$anim.play("idle")
 
 	move_and_slide()
 
@@ -43,3 +53,12 @@ func die():
 func _on_attack_timer_timeout():
 	if position.distance_to(player.position) <= attackDistance:
 		player.takeDamage(damage)
+
+# Ajusta a rotação do "enemy" para evitar andar de costas
+func adjust_rotation():
+	# Obtém a direção do jogador
+	var player_direction = (player.global_transform.origin - global_transform.origin).normalized()
+	# Verifica se o "enemy" está andando de costas
+	if player_direction.z < 0:
+		# Rotaciona o "enemy" 180 graus em torno do eixo vertical
+		rotate_y(deg_to_rad(180))

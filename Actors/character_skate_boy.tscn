@@ -2857,12 +2857,12 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_qwvsa")
 
 [node name="arm-left" type="MeshInstance3D" parent="character-skate-boy2/root/torso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0998968, 0.1115, 0.0115)
+transform = Transform3D(0.707108, 0.707106, 0, -0.707106, 0.707108, 0, 0, 0, 1, 0.0998968, 0.1115, 0.0115)
 mesh = SubResource("ArrayMesh_8no8w")
 skeleton = NodePath("")
 
 [node name="arm-right" type="MeshInstance3D" parent="character-skate-boy2/root/torso"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0998968, 0.1115, 0.0115)
+transform = Transform3D(0.707108, -0.707106, 0, 0.707106, 0.707108, 0, 0, 0, 1, -0.0998968, 0.1115, 0.0115)
 mesh = SubResource("ArrayMesh_f2uym")
 skeleton = NodePath("")
 
@@ -2877,7 +2877,7 @@ mesh = SubResource("ArrayMesh_8dnyw")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_stdnf")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="anim" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_3ovp3")
 }
