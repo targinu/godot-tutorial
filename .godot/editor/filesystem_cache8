@@ -1,11 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697034460
+::res://::1697222028
 icon.svg::CompressedTexture2D::2309103883405616472::1696611381::1696611396::1::::<><>::
-teste.tscn::PackedScene::5921853463177364656::1696966020::0::1::::<><>::res://Scripts/teste.gd<>uid://dergayfd88ulf::::res://Objects/Bridge.tscn<>uid://bvs054lf5d2ug::::res://Objects/BlockLarge.tscn<>uid://c0h3mdrxs6qsk::::res://Objects/BlockRounded.tscn<>uid://csxo57hwihfm1::::res://Objects/BlockQuarter.tscn<>uid://bksosklxtjtg6::::res://Objects/Chest.tscn<>uid://cwdeagbf5txcy::::res://Objects/BlockSlope.tscn<>uid://cop8kcpg8xfnk::::res://Objects/BlockSlopeHalf.tscn<>uid://droiornj50gc5::::res://Actors/character_skeleton.tscn<>res://Scripts/character.gd<>uid://15yrnycluamy::::res://Objects/coin_gold.tscn
-::res://Actors/::1696966422
+teste.tscn::PackedScene::5921853463177364656::1697221427::0::1::::<><>::res://Scripts/teste.gd<>uid://dergayfd88ulf::::res://Objects/Bridge.tscn<>uid://bvs054lf5d2ug::::res://Objects/BlockLarge.tscn<>uid://c0h3mdrxs6qsk::::res://Objects/BlockRounded.tscn<>uid://csxo57hwihfm1::::res://Objects/BlockQuarter.tscn<>uid://bksosklxtjtg6::::res://Objects/Chest.tscn<>uid://cwdeagbf5txcy::::res://Objects/BlockSlope.tscn<>uid://cop8kcpg8xfnk::::res://Objects/BlockSlopeHalf.tscn<>uid://droiornj50gc5::::res://Actors/character_skeleton.tscn<>res://Scripts/character.gd<>uid://15yrnycluamy::::res://Objects/coin_gold.tscn
+::res://Actors/::1697222028
 character.tscn::PackedScene::5773299979752830939::1696898053::0::1::::<><>::res://Scripts/character.gd
-character_skeleton.tscn::PackedScene::8381885331968899202::1696966422::0::1::::<><>::
-::res://Models/::1696886129
+character_skate_boy.tscn::PackedScene::3218719214360144415::1697222020::0::1::::<><>::
+character_skeleton.tscn::PackedScene::8381885331968899202::1697221427::0::1::::<><>::uid://dbkw7g2wwvwxb::::res://materials/Cracked_Mud_001_OCC.jpg
+::res://materials/::1697221420
+Cracked_Mud_001_OCC.jpg::CompressedTexture2D::7251487949383402607::1697221371::1697221420::1::::<><>::
+::res://Models/::1697222028
 arrow.glb::PackedScene::5005954539750765921::1670238691::1696614818::1::::<><>::
 arrows.glb::PackedScene::1376461499389693241::1670238691::1696614818::1::::<><>::
 barrel.glb::PackedScene::8907946748792798606::1670238691::1696614817::1::::<><>::
@@ -68,6 +71,7 @@ bridgeHalf.glb::PackedScene::5514690382591755264::1670238695::1696614796::1::::<
 bridgeRamp.glb::PackedScene::7524972217332015590::1670238695::1696614796::1::::<><>::
 buttonRound.glb::PackedScene::2264129378884533955::1670238695::1696614796::1::::<><>::
 buttonSquare.glb::PackedScene::3731694390664953657::1670238695::1696614796::1::::<><>::
+character-skate-boy.glb::PackedScene::5777078490396864725::1697221783::1697222028::1::::<><>::
 chest.glb::PackedScene::6983627593872828135::1670238695::1696619817::1::::<><>::
 coinBronze.glb::PackedScene::2517321265266586532::1670238695::1696614795::1::::<><>::
 coinGold.glb::PackedScene::1223625424541651122::1670238695::1696614795::1::::<><>::
@@ -122,7 +126,7 @@ treePineSnow.glb::PackedScene::8989400811758289990::1670238698::1696614796::1:::
 treeSnow.glb::PackedScene::2744452078603261948::1670238698::1696614796::1::::<><>::
 ::res://Objects/::1696966276
 BlockLarge.tscn::PackedScene::3899118238738585330::1696617690::0::1::::<><>::uid://ct5blt6rpox5h
-BlockQuarter.tscn::PackedScene::6084626545501424126::1696966276::0::1::::<><>::uid://byqpx2lsd1xif::::res://Models/blockQuarter.glb
+BlockQuarter.tscn::PackedScene::6084626545501424126::1696966276::0::1::::<><>::uid://byqpx2lsd1xif
 BlockRounded.tscn::PackedScene::6543734792841781734::1696619492::0::1::::<><>::uid://8070xki5f53x
 BlockSlope.tscn::PackedScene::6323432245609105680::1696619633::0::1::::<><>::uid://bn56maxrfyc1j
 BlockSlopeHalf.tscn::PackedScene::5788472491866282784::1696619669::0::1::::<><>::uid://d2ss4e7bk54rm
@@ -130,7 +134,7 @@ Bridge.tscn::PackedScene::7475477417873199107::1696619761::0::1::::<><>::uid://c
 Chest.tscn::PackedScene::3126350645132650575::1696619861::0::1::::<><>::uid://c6q6ldbaoj4tf
 coin_gold.tscn::PackedScene::1888329553518628544::1696966240::0::1::::<><>::res://Scripts/coin_gold.gd
 crate.tscn::PackedScene::6185610619273911035::1696617998::0::1::::<><>::uid://ds0npperjfd6l
-::res://Scripts/::1696970513
-character.gd::GDScript::-1::1696970513::0::1::::<>CharacterBody3D<>::
+::res://Scripts/::1697220926
+character.gd::GDScript::-1::1697220570::0::1::::<>CharacterBody3D<>::
 coin_gold.gd::GDScript::-1::1696960684::0::1::::<>Area3D<>::
-teste.gd::GDScript::-1::1696880913::0::1::::<>Node3D<>::
+teste.gd::GDScript::-1::1697041026::0::1::::<>Node3D<>::

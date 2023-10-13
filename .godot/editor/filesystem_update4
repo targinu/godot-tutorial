@@ -1,4 +1,5 @@
 res://Actors/character_skeleton.tscn
-res://Scripts/character.gd
 res://teste.tscn
-res://Scripts/teste.gd
+res://Actors/character_skate_boy.tscn
+res://Scripts/enemy.gd
+res://Scripts/character.gd

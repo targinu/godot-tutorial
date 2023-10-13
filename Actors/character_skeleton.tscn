@@ -1,4 +1,6 @@
-[gd_scene load_steps=46 format=3 uid="uid://droiornj50gc5"]
+[gd_scene load_steps=47 format=3 uid="uid://droiornj50gc5"]
+
+[ext_resource type="Texture2D" uid="uid://dbkw7g2wwvwxb" path="res://materials/Cracked_Mud_001_OCC.jpg" id="1_dqkcl"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kyii4"]
 points = PackedVector3Array(0.065, -0.179679, 0.116496, 0.065, 0, 0.0649964, -0.065, -0.179679, 0.116496, 0.065, -0.26, 0.116496, 0.065, 0, -0.0650051, -0.065, 0, 0.0649964, -0.065, -0.26, 0.116496, 0.065, -0.26, -0.0882992, -0.065, 0, -0.0650051, 0.065, -0.219839, -0.0847108, -0.065, -0.26, -0.0882992, -0.065, -0.219839, -0.0847108)
@@ -22,6 +24,7 @@ points = PackedVector3Array(0.0999941, 0.26, 0.13, 0.13, 0.229994, 0.13, 0.09999
 resource_name = "colormap"
 cull_mode = 2
 vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_dqkcl")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5ew7t"]
 _surfaces = [{

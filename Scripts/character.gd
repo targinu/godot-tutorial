@@ -6,6 +6,11 @@ const JUMP_VELOCITY = 3.0
 var mouse_rotation_sensitivity = 0.1
 var mouse_look = Vector2(0, 0)
 
+#variaveis de hp
+var currentHP = 10.0
+var maxHP = 10.0
+var damage = 1
+
 #obtem a gravidade das configurações do projeto para sincronizar com os nós RigidBody.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -76,9 +81,20 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	print(currentHP)
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 	if Input.is_action_pressed("ui_accept") and Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func takeDamage(damage):
+	currentHP -= damage
+	
+	if currentHP <= 0:
+		die()
+
+func die():
+	get_tree().reload_current_scene()

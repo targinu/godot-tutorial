@@ -1,11 +1,12 @@
+Timer
+CollisionShape3D
+CharacterBody3D
+MeshInstance3D
 WorldEnvironment
 Area3D
 AnimationPlayer
 Node3D
-CollisionShape3D
-CharacterBody3D
 Camera3D
-MeshInstance3D
 DirectionalLight3D
 StaticBody3D
 RigidBody3D
